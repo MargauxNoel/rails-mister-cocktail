@@ -1,0 +1,17 @@
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.association :ingredient %>
+  <%#= f.input :ingredient, collection: Ingredient.all.map { |i| [i.address, i.id ]}  %>
+  <%= f.input :description %>
+  <%= f.submit "Cocktail ready!", class: 'btn btn-primary' %>
+<% end %>
+
+<!-- cocktail_doses_path
+<form action="/cocktails/:cocktail_id/doses" method="POST">
+</form>
+
+
+
+doses_path
+<form action="/doses" method="POST">
+</form>
+ -->
